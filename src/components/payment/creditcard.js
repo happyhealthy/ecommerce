@@ -23,6 +23,22 @@ const PaymentForm = (props) => {
     setState((prev) => ({ ...prev, focus: evt.target.name }));
   };
 
+  const handleSubmit = (evt) => {
+    evt.preventDefault();
+    //todo: early return if the form is empty
+    //todo: validate field
+
+    onOk();
+    //todo: clear the state
+    //todo: notify success (antd component / react hot toast)
+  };
+
+  const handleCancel = (evt) => {
+    evt.preventDefault();
+    onCancel();
+    //todo: clear the state
+  };
+
   return (
     <>
       <Divider />
@@ -76,10 +92,10 @@ const PaymentForm = (props) => {
             onFocus={handleInputFocus}
           />
           <div className="flex flex-row gap-4">
-            <Button danger onClick={onCancel}>
+            <Button danger onClick={handleCancel}>
               Cancel
             </Button>
-            <Button onClick={onOk}>Pay</Button>
+            <Button onClick={handleSubmit}>Pay</Button>
           </div>
         </form>
       </div>
