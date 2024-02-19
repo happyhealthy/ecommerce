@@ -26,6 +26,7 @@ const PaymentPage = () => {
         cancelButtonProps={{ hidden: true }}
         okButtonProps={{ hidden: true }}
         style={{ width: "100%" }}
+        onCancel={handleCancel}
       >
         <PaymentForm onOk={handleOk} onCancel={handleCancel} />
       </Modal>
