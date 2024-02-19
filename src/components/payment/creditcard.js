@@ -64,7 +64,7 @@ const PaymentForm = (props) => {
             <Button danger onClick={handleCancel}>
               Cancel
             </Button>
-            <input type="submit" className="btn btn-primary" value="Pay" />
+            <Button htmlType="submit">Pay</Button>
           </div>
         </form>
       </div>
