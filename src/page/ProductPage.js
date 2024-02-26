@@ -29,6 +29,7 @@ export const ProductPage = () => {
       <h1>Product Page</h1> <br></br>
       {/* <Table dataSource={dataSource} columns={columns} />; */}
       <List
+        className="m-4"
         itemLayout="vertical"
         pagination={{
           position: "both",
